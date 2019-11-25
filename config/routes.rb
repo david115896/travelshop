@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :users, except:[:index, :new, :create]
 
   resources :activities
   devise_for :users
