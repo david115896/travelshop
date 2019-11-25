@@ -5,3 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Activity.destroy_all
+i = 1
+10.times do
+	
+	url = "image" + i.to_s + ".jpg"
+	Activity.create(title: Faker::Game.title, description: Faker::Lorem.paragraph, price: Faker::Number.decimal(l_digits: 2), image_url: url)
+	i +=1
+
+end
+
+User.destroy_all
+10.times do
+
+	i = rand
+	email = "user" + i.to_s + "@yopmail.com"
+	User.create!(email: email , password: "azerty")
+
+end
+
+puts "Génération terminée"
