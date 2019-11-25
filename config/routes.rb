@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
 
-  resources :activities
+  resources :activities do
+    collection { post :import}
+  end
   devise_for :users
 
   devise_scope :user do
