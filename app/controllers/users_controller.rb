@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     begin
       @user = User.find(params[:id])
     rescue
-      redirect_to activities_path, flash: {danger: "This user doesn't exist !" }
+      redirect_to new_user_session, flash: {danger: "This user doesn't exist !" }
     end
   end
 
