@@ -16,12 +16,11 @@ i = 1
 
 end
 
-i = 1
 10.times do
 
+	i = rand
 	email = "user" + i.to_s + "@yopmail.com"
 	User.create!(email: email , password: "azerty")
-	i +=1
 
 end
 
