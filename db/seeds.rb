@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+Activity.destroy_all
 i = 1
 10.times do
 	
@@ -16,6 +16,7 @@ i = 1
 
 end
 
+User.destroy_all
 10.times do
 
 	i = rand
