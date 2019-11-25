@@ -26,9 +26,11 @@ h1,h2,h3,h4 {
 }
 .actions {
 text-align: center;
-
-
 }
 .field {
     text-align: center;
     }
+.footer {
+    position: relative;
+    background-color: coral;
+}
