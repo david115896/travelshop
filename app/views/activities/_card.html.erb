@@ -3,17 +3,28 @@
 
 
 
-  <div class="card">
-<div id="img_card">
-    <%= image_tag "1.jpg" %>
-  </div>
-    <div class="card-body">
-      <td><%= link_to 'Show', activity %></td>
-      <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
-      <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <h5 class="card-title"><%= activity.title %></h5>
+<div class="row">
 
-      <p class="card-text"><small class="text-muted"><%=activity.price %></small></p>
+    <div class="card m-2" style="width: 16rem;">
+
+      <%= image_tag "1.jpg", class:"img_card" %>
+      <p class="price"><small class="text-muted"><%=activity.price%> $</small></p>
+
+      <div class="card-body">
+
+        <h5 class="card-title"><%= activity.title %></h5>
+
+        <%= link_to 'Show', activity, class: "btn btn-primary" %>
+      <%= link_to 'Edit', edit_activity_path(activity), class: "btn btn-primary" %>
+        <%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } ,class: "btn btn-primary" %>
+      </div>
+
+
+
+
+
     </div>
-  </div>
+
+</div>
+
 

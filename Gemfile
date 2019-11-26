@@ -70,3 +70,7 @@ gem 'better_errors'
 gem "binding_of_caller"
 gem 'pry'
 
+
+gem "bootstrap", "~> 4.3"
+
+gem "jquery-rails", "~> 4.3"
