@@ -35,12 +35,12 @@ text-align: center;
      object-fit: fill;
      color:#002F4B ;
 }
-.showCard {
+.card-body {
     background-color:#f7e6a9;
     width: 100%;
     color: #002724;
     border-radius: 5px;
-    }
+}
 .pic1 {
     margin-left: 2.5%;
     margin-right: 5%;
