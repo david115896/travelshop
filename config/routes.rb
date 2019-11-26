@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+	resources :carts, only:[:show, :create, :destroy]
   resources :activities do
     collection { post :import}
   end
