@@ -18,7 +18,7 @@ body {
 font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 h1 { font-family:  'Coldiac Free Regular';
-    font-size: x-large;
+    font-size: 40px;
 
 } 
 h1,h2,h3,h4 {
@@ -30,7 +30,8 @@ text-align: center;
 .field {
     text-align: center;
     }
-.footer {
-    position: relative;
-    background-color: coral;
+.jumbotron {
+        background-image: url("china.jpeg");
+     background-size: cover;
+     color:#002F4B ;
 }
