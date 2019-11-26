@@ -15,7 +15,8 @@
  */
 @import "bootstrap";
 body {
-font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+font-family: Futura, "Trebuchet MS", Arial, sans-serif;height: 100%;
+
 }
 h1 { font-family:  'Coldiac Free Regular';
     font-size: 40px;
@@ -35,6 +36,8 @@ text-align: center;
         background-image: url("china.jpeg");
      background-size: cover;
      color:#002F4B ;
+    text-align: center;
+
 }
 .showCard {
     background-color:#FEFFFC;
@@ -77,6 +80,8 @@ padding-top: 0%;
     color: rgba(255, 255, 255, 0.6);
     background-color: rgba(0, 0, 0, 0.2);
     text-align: center;
+
+
 }
 .img_card{
     width: 100%;
@@ -85,6 +90,23 @@ object-fit: cover;
     padding: 2%;
 }
 
-.price{
-po
+
+
+
+.card.m-2{
+   height: 80%;
+
+}
+
+html, body {
+    height: 100%;
+    margin: 0; padding: 0;
+}
+body {
+    display : table;
+    width: 100%;
+}
+footer {
+    display : table-row;
+    height: 100px; /* à titre d'exemple */
 }
