@@ -32,7 +32,7 @@ text-align: center;
     }
 .jumbotron {
         background-image: url("china.jpeg");
-     background-size: cover;
+     object-fit: cover;
      color:#002F4B ;
 }
 .showCard {
