@@ -15,10 +15,12 @@
  */
 @import "bootstrap";
 body {
-font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+font-family: Futura, "Trebuchet MS", Arial, sans-serif;height: 100%;
+
 }
 h1 { font-family:  'Coldiac Free Regular';
     font-size: 40px;
+    text-align: center;
 
 } 
 h1,h2,h3,h4 {
@@ -34,6 +36,8 @@ text-align: center;
         background-image: url("china.jpeg");
      object-fit: fill;
      color:#002F4B ;
+    text-align: center;
+
 }
 .showCard {
     background-color:#f7e6a9;
@@ -45,4 +49,64 @@ text-align: center;
     margin-left: 2.5%;
     margin-right: 5%;
     border-radius: 10px;
+}
+
+
+
+.card{
+    display: flex;
+
+    width: 300px;
+    height: 200px;
+}
+
+.card-body{
+
+padding-top: 0%;
+    margin-top: 0%;
+}
+
+
+
+.card-deck{
+    margin-right: 5%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.page-footer {
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+
+}
+.img_card{
+    width: 100%;
+    height: 40%;
+object-fit: cover;
+    padding: 2%;
+}
+
+
+
+
+.card.m-2{
+   height: 80%;
+
+}
+
+html, body {
+    height: 100%;
+    margin: 0; padding: 0;
+}
+body {
+    display : table;
+    width: 100%;
+}
+footer {
+    display : table-row;
+    height: 100px; /* à titre d'exemple */
 }
