@@ -71,6 +71,8 @@ gem 'better_errors'
 gem "binding_of_caller"
 gem 'pry'
 gem 'mailjet'
+gem 'stripe'
+
 
 
 gem "bootstrap", "~> 4.3"
