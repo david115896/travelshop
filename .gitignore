@@ -28,3 +28,4 @@
 
 .env
 *.swp
+/app/assets/stylesheets/brut.css
