@@ -1,0 +1,30 @@
+
+
+.card{
+display: flex;
+
+    width: 300px;
+    height: 200px;
+}
+
+
+#img_card{
+  display: flex;
+    width: 1px;
+    height: 1px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+
+.card-deck{
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.page-footer {
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+}

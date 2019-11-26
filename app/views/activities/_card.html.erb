@@ -1,0 +1,19 @@
+
+
+
+
+
+  <div class="card">
+<div id="img_card">
+    <%= image_tag "1.jpg" %>
+  </div>
+    <div class="card-body">
+      <td><%= link_to 'Show', activity %></td>
+      <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
+      <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <h5 class="card-title"><%= activity.title %></h5>
+
+      <p class="card-text"><small class="text-muted"><%=activity.price %></small></p>
+    </div>
+  </div>
+
