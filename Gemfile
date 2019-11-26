@@ -72,3 +72,7 @@ gem "binding_of_caller"
 gem 'pry'
 gem 'mailjet'
 
+
+gem "bootstrap", "~> 4.3"
+
+gem "jquery-rails", "~> 4.3"
