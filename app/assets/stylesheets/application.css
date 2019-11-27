@@ -98,3 +98,21 @@ footer {
     display : table-row;
     height: 100px; /* à titre d'exemple */
 }
+.profile {
+    align-self: flex-end;
+}
+.editForm {
+    margin-top: 2%;
+    text-align: center;
+    background-color:#264249;
+    border-radius: 5px;
+    width: 60%;
+}
+.fieldedit {
+  border-radius: 10px;
+  width: 80%;
+}
+.buttonEdit {
+  background-color: rgb(62, 134, 110);
+  border-radius: 15px;
+}
