@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-
+  resources :sold_items
+  resources :orders, only:[:index, :create, :destroy]
   resources :carts, only:[:index, :create, :destroy]
 
   resources :activities do
@@ -9,11 +10,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   devise_scope :user do
-    root :to => 'devise/sessions#new'
-    
+    root :to => 'activities#index'
   end
   resources :users, except:[:index, :new, :create]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-	resources :charges, only:[:new, :create]
+	resources :charges, only:[:index, :new, :create]
 
 end

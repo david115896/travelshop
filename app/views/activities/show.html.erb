@@ -13,7 +13,7 @@
       <%= image_tag @activity.illustration, class:"pic1",  alt:"Card image" %>   
       <p id="notice"><%= notice %></p>
        <%=@activity.description%>
-        <%= button_to 'Ajouter au panier', carts_path(:activity_id => @activity.id), method: :post, class: "mr-3"%>
+        <%= button_to 'Add to Cart', carts_path(:activity_id => @activity.id), method: :post, class: "mr-3"%>
 
     </div>
   </div>
