@@ -5,24 +5,44 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+require 'csv'
+puts "destruction de l'ancienne BDD en cours"
 Activity.destroy_all
-i = 1
-10.times do
+User.destroy_all
+puts "destruction terminée"
+
+
+puts "Génération de la nouvelle BDD en cours"
+
+
+
+puts "Extraction du CSV en cours"
+file = CSV.read("actvities_seville2.csv")
+puts "Extraction terminée"
+
+puts "Génération des activités en cours" 
+num = 1
+20.times do
 	
-	url = "image" + i.to_s + ".jpg"
-	Activity.create(title: Faker::Game.title, description: Faker::Lorem.paragraph, price: Faker::Number.decimal(l_digits: 2), image_url: url)
-	i +=1
+	number = rand(1..(file.size - 1))
+	a =	Activity.create(title: file[number][0], description: file[number][1], price: file[number][2], image_url: file[number][3])
+	a.illustration.attach(io: File.open('app/assets/images/image' + num.to_s + '.jpg'), filename: 'image' + num.to_s + '.jpeg')
+	num += 1
+	
+	if (num > 11) then
+		num = 1
+	end	
 
 end
+puts "Génération des activités terminées"
 
-User.destroy_all
-10.times do
+puts "Génération des utilisateurs en cours" 
+20.times do |i|
 
-	i = rand
 	email = "user" + i.to_s + "@yopmail.com"
 	User.create!(email: email , password: "azerty")
 
 end
+puts "Génération des utilisateurs terminées"
 
 puts "Génération terminée"

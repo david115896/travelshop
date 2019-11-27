@@ -10,7 +10,7 @@
 
       <h5 class="card-title"><%=@activity.title%></h5>
       <h6 class="card-subtitle text-muted"></h6>
-      <%= image_tag @activity.image_url, class:"pic1",  alt:"Card image" %>   
+      <%= image_tag @activity.illustration, class:"pic1",  alt:"Card image" %>   
       <p id="notice"><%= notice %></p>
        <%=@activity.description%>
         <%= button_to 'Ajouter au panier', carts_path(:activity_id => @activity.id), method: :post, class: "mr-3"%>
