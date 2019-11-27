@@ -14,7 +14,6 @@
  *= require_self
  *= require font-awesome
  */
-@import "bootstrap-sprockets";
 @import "bootstrap";
 
 body {
