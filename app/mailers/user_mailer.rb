@@ -19,4 +19,12 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Changement de mot de passe') 
   end
 
+  def order_email(user)
+    @user = user 
+
+    @url  = 'https://travel-shop.herokuapp.com/activities'
+
+    mail(to: @user.email, subject: 'Thanks for your order')
+  end
+
 end
