@@ -1,27 +1,11 @@
-<div class="container editForm">
 
-  <%= form_for @user do |f| %>
-  <p>
-    <%= f.label :first_name %><br />
-    <%=f.text_field :first_name, class: 'fieldedit' %>
-  </p>
-  <p>
-    <%= f.label :last_name %><br />
-    <%=f.text_field :last_name,class: 'fieldedit' %>
-  </p>
-
-  <p>
-    <%= f.label :address %><br />
-    <%=f.text_area :address, class: 'fieldedit'%>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%=f.text_field :email, class: 'fieldedit'%>
-  </p>
-  <p>
-    <button class="buttonEdit"><%=f.submit %></button>
-    
-  </p>
-  <% end %>
-</div>
+<%= form_for @user do |f| %>
+<p>
+  <%= f.label :first_name %><br />
+  <%= f.text_field :first_name %>
+</p>
+<p>
+  <%= f.label :last_name %><br />
+  <%= f.text_field :last_name %>
+</p>
 
