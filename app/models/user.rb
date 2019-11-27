@@ -13,5 +13,7 @@ class User < ApplicationRecord
     
  has_many :carts
  has_many :activities, through: :carts
+ has_many :orders
+ has_many :sold_items, through: :orders
 
 end

@@ -7,6 +7,7 @@ class Activity < ApplicationRecord
     
     has_many :carts
     has_many :users, through: :carts
+    has_many :sold_items
 
     def self.import(file)
         CSV.foreach(file.path, headers: true) do |row|
