@@ -1,31 +1,27 @@
 <!doctype html>
+<html>
+  <head>
+    <title>TravelShop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/71edf01ac1.js" crossorigin="anonymous"></script>
 
-<head>
-  <title>TravelShop</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <script src="https://kit.fontawesome.com/71edf01ac1.js" crossorigin="anonymous"></script>
+    <!-- Theme Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/solar/bootstrap.min.css" rel="stylesheet" integrity="sha384-8nq3OiMMgrVFAHyRMMO+DTfMEciSY+c3Awhj/5ljQ1xck1Uv2BUtMjsjLD8GT5Er" crossorigin="anonymous"> 
 
-  <!-- Bootstrap -->
-  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/solar/bootstrap.min.css" rel="stylesheet" integrity="sha384-8nq3OiMMgrVFAHyRMMO+DTfMEciSY+c3Awhj/5ljQ1xck1Uv2BUtMjsjLD8GT5Er" crossorigin="anonymous">
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-  <%= javascript_include_tag 'application' %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-</head>
-<body>
-<%=render "layouts/navbar" %>
-  <%= yield %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
+    <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
+  </head>
+  <body>
+    <%=render "layouts/navbar" %>
+    
+    <%= yield %>
 
-
-<%= render "layouts/footer" %>
-</body>
-
-
-
+    <%= render "layouts/footer" %>
+  </body>
 
 </html>

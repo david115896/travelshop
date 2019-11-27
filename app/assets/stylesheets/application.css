@@ -10,10 +10,13 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= 
-
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
  */
+@import "bootstrap-sprockets";
 @import "bootstrap";
+
 body {
 font-family: Futura, "Trebuchet MS", Arial, sans-serif;height: 100%;
 
@@ -27,15 +30,17 @@ h1,h2,h3,h4 {
     font-family: 'Coldiac Free Regular';
 }
 .actions {
-text-align: center;
+    text-align: center;
 }
 .field {
     text-align: center;
-    }
+}
+
+
 .jumbotron {
-        background-image: url("china.jpeg");
-     object-fit: fill;
-     color:#002F4B ;
+    background-image: url("china.jpeg");
+    object-fit: fill;
+    color:#002F4B ;
     text-align: center;
 
 }
@@ -46,24 +51,13 @@ text-align: center;
     border-radius: 5px;
 }
 .pic1 {
+    display:block;
     margin-left: 2.5%;
     margin-right: 5%;
     border-radius: 10px;
-}
-
-
-
-.card{
-    display: flex;
-
-    width: 300px;
-    height: 200px;
-}
-
-.card-body{
-
-padding-top: 0%;
-    margin-top: 0%;
+    height: 370px; 
+    width: 95%; 
+    
 }
 
 
@@ -80,8 +74,6 @@ padding-top: 0%;
     color: rgba(255, 255, 255, 0.6);
     background-color: rgba(0, 0, 0, 0.2);
     text-align: center;
-
-
 }
 .img_card{
     width: 100%;
@@ -89,8 +81,6 @@ padding-top: 0%;
 object-fit: cover;
     padding: 2%;
 }
-
-
 
 
 .card.m-2{
