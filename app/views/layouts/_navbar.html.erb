@@ -1,31 +1,32 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/">TravelShop</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
+  <a class="navbar-brand" href="/"><i class="fas fa-globe-americas"></i> TravelShop</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><%= link_to 'Panier', carts_path,class: 'nav-link' %> </li>
+      <li class="nav-item">
+        <%= link_to carts_path,class: 'nav-link' do %>Cart <i class="fas fa-shopping-cart"></i><%end%>
+      </li>
+      <li class="nav-item">
+        <%= link_to carts_path,class: 'nav-link' do %>Profile <i class="fas fa-id-card-alt"></i><%end%>
+      </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  Registration </a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Login/out <i class="fas fa-sign-in-alt"></i>
+        </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="../users/sign_up">Sign Up</a>
-          <a class="dropdown-item" href="../users/sign_in">Log In</a>
+          <% if logged_in? %>
           <a class="dropdown-item" href="../users/sign_out" data-method="delete">Disconnect</a>
+          <% else %>
+          <% link_to 'Sign Up',new_user_registration_path,class: 'dropdown-item'%>
+          <% link_to 'Log In' ,new_user_session_path,class: 'dropdown-item'%>
+          <% end %>
         </div>
       </li>
     </ul>
-    <li class="nav-item profile"><%= link_to edit_user_path(current_user.id) do %>
-      <i class="fas fa-user-astronaut"></i>
-    <% end %></li>
-
-      <!-- <li class="nav-item">
-        <a class="nav-link" href="../users/sign_in" tabindex="-1" aria-disabled="true">Connexion</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/users/sign_out" data-method="delete">Disconnect</a>
-      </li> -->
-
   </div>
 </nav>
