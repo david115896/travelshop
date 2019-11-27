@@ -1,26 +1,27 @@
 class CartsController < ApplicationController
   before_action :set_cart, only: [:destroy]
 
-  def show
-    @carts_user = Cart.where(user: @user)
+
+  def index
+    @carts_user = Cart.where(user_id: current_user.id)
   end
 
   def create
     @cart = Cart.new(cart_params)
+    @cart.activity_id = Activity.find(params[:activity_id]).id
+    @cart.user_id = current_user.id
 
-    respond_to do |format|
-      if @cart.save
-        format.html { redirect_to @cart, notice: 'Cart was successfully created.' }
-      else
-        format.html { render :new }
-      end
+    if @cart.save
+      redirect_to activities_path, notice: 'Actitivy added to cart'
+    else
+      render :new
     end
   end
 
   def destroy
     @cart.destroy
     respond_to do |format|
-      format.html { redirect_to carts_url, notice: 'Cart was successfully destroyed.' }
+      format.html { redirect_to carts_url, notice: 'Actitivy removed from cart' }
     end
   end
 

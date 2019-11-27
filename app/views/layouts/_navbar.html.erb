@@ -1,29 +1,22 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/">TravelShop</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">Panier</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../users/edit">Profile</a>
-      </li>
-      
+      <li class="nav-item"> <%= link_to 'Panier', carts_path %> </li>
+      <li class="nav-item"> <a class="nav-link" href="../users/edit">Profile</a>  </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Registration
-        </a>
-        
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  Registration </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="../users/sign_up">Sign Up</a>
           <a class="dropdown-item" href="../users/sign_in">Log In</a>
           <a class="dropdown-item" href="../users/sign_out" data-method="delete">Disconnect</a>
-      </ul>
+        </div>
+      </li>
+    </ul>
  
 
       <!-- <li class="nav-item">
