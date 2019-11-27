@@ -14,7 +14,6 @@
  *= require_self
  *= require font-awesome
  */
-@import "bootstrap";
 
 body {
 font-family: Futura, "Trebuchet MS", Arial, sans-serif;height: 100%;
