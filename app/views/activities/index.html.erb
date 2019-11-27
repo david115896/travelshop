@@ -1,30 +1,14 @@
 
 <div class="jumpo">
-<%= render "layouts/jumpotron" %>
+  <%= render "layouts/jumpotron" %>
 </div>
-
-
 <div class="activities">
-<h1>Activities</h1>
-
-
-
-
-<br>
-
-<%= link_to 'New Activity', new_activity_path, class: "btn btn-primary" %>
-
-
-<div class="card-deck">
-
-  <% for activity in @activities do %>
-    <%= render partial: "card", locals: {activity: activity} %>
-
-  <% end  %>
-    </div>
-
-
-
-
+  <h1>Activities</h1>
+  <%= link_to 'New Activity', new_activity_path, class: "btn btn-primary" %>
+  <div class="card-deck">
+    <% for activity in @activities do %>
+      <%= render partial: "card", locals: {activity: activity} %>
+    <% end  %>
+  </div>
 </div>
 
