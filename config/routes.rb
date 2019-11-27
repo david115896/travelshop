@@ -13,7 +13,6 @@ Rails.application.routes.draw do
     root :to => 'activities#index'
   end
   resources :users, except:[:index, :new, :create]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-	resources :charges, only:[:new, :create]
+	resources :charges, only:[:index, :new, :create]
 
 end

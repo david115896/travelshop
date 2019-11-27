@@ -14,20 +14,7 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(order_params)
-    @order.user = current_user
     
-    respond_to do |format|
-      if @order.save
-        Order.add_items(current_user.id, @order.id)
-        Cart.destro(current_user.id)
-
-       # redirect_to destro_carts_path and return
-        format.html { redirect_to activities_path, notice: 'Order was successfully created.' }
-      else
-        format.html { render :new }
-      end
-    end
   end
 
   def update

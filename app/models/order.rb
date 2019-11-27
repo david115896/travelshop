@@ -1,4 +1,7 @@
 class Order < ApplicationRecord
+
+    #after_create :order_send
+
     belongs_to :user
     has_many :sold_items
 
@@ -7,5 +10,13 @@ class Order < ApplicationRecord
         items.each do |item|
             SoldItem.create(order_id: order_id, user_id: user_id, activity_id: item.activity.id )
         end
+    end
+    def self.add_order(current_user)
+        @order = Order.new
+        @order.user = current_user
+        @order.save
+        Order.add_items(current_user.id, @order.id)
+        Cart.destro(current_user.id)
+        UserMailer.order_email(current_user).deliver
     end
 end
