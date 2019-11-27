@@ -33,7 +33,12 @@ h1,h2,h3,h4 {
 .field {
     text-align: center;
 }
-
+.card-body {
+    background-color: #213A40;
+    width: 100%;
+    color: #002724;
+    border-radius: 5px;
+}
 
 .jumbotron {
     background-image: url("china.jpeg");
@@ -115,4 +120,15 @@ footer {
 .buttonEdit {
   background-color: rgb(62, 134, 110);
   border-radius: 15px;
+}
+.userLogo {
+    align-content: flex-end;
+}
+.cartLogo {
+    height: max-content;
+}
+.alertlogin{
+    text-align: center;
+    width: 50%;
+    margin: auto;
 }
