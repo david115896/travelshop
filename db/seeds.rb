@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'csv'
-
 puts "destruction de l'ancienne BDD en cours"
 Activity.destroy_all
 User.destroy_all
@@ -22,10 +21,17 @@ file = CSV.read("actvities_seville2.csv")
 puts "Extraction terminée"
 
 puts "Génération des activités en cours" 
+num = 1
 20.times do
 	
 	number = rand(1..(file.size - 1))
-	Activity.create(title: file[number][0], description: file[number][1], price: file[number][2], image_url: file[number][3])
+	a =	Activity.create(title: file[number][0], description: file[number][1], price: file[number][2], image_url: file[number][3])
+	a.illustration.attach(io: File.open('app/assets/images/image' + num.to_s + '.jpg'), filename: 'image' + num.to_s + '.jpeg')
+	num += 1
+	
+	if (num > 11) then
+		num = 1
+	end	
 
 end
 puts "Génération des activités terminées"

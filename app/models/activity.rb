@@ -9,6 +9,8 @@ class Activity < ApplicationRecord
     has_many :users, through: :carts
     has_many :sold_items
 
+		has_one_attached :illustration
+
     def self.import(file)
         CSV.foreach(file.path, headers: true) do |row|
             Activity.create! row.to_hash
