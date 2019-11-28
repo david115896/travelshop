@@ -2,7 +2,6 @@
 <div class="title_cart">
 <h2>Cart</h2>
 </div>
-
 <div class="container cart_Table">
   <div class="tabl-cart">
     <table class="table ">
@@ -13,18 +12,13 @@
           <th scope="col">Quantity</th>
           <th scope="col">Price</th>
           <th scope="col">Delete</th>
-
         </tr>
       </thead>
-
-
       <tbody>
         <% @carts_user.each do |cart| %>
         <tr>
           <td><%= image_tag cart.activity.image_url, class:"img-50" %></td>
           <td><%= cart.activity.title %></td>
-
-
           <td><%= 1%></td>
           <td><%= cart.activity.price  %> $</td>
           <td><%= link_to  cart, method: :delete, data: { confirm: 'Are you sure?' } do%> <i class="fas fa-trash"></i> <%end%></td>
@@ -32,14 +26,11 @@
         <% end %>
       </tbody>
     </table>
-
   </div>
 </div>
-
 <br>
 <br>
 <br>
 <div class="btn_checkout">
 <%= link_to 'Proceed to checkout', new_activity_path, class: "btn btn-primary" %>
-
 </div>

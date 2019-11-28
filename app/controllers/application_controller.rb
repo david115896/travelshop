@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
+add_flash_types :info,:error,:warning,:success
+
+
 
     def configure_devise_parameters
         devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit(:first_name, :last_name, :is_alive, :email, :password, :password_confirmation)}
@@ -9,7 +12,7 @@ class ApplicationController < ActionController::Base
     end
         
     def after_sign_out_path_for(resource_or_scope)
-        new_user_session_path
+        activities_path
     end
 
     def authenticate_user
