@@ -242,4 +242,23 @@
         .close {
         color: black;
         }
-        
+        .edit_user_form {
+            text-align: center;
+           color: rgba(255, 255, 255, 0.6);
+            border:  3px  rgb(78, 77, 77) solid;
+            border-radius: 10px;
+            background-color: #213a40;
+           width: 50%;
+           margin-top: 2.5%;
+           margin-bottom: 2.5%;
+           height: fit-content;
+           padding-top: 2.5%;
+           padding-bottom: 2.5%;
+        }
+        .formfield {
+            border-radius: 10px;
+        }
+        .buttonFormEdit {
+            border-radius: 10px;
+        }
+       
