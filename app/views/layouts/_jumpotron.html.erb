@@ -7,6 +7,6 @@
   <hr class="my-4">
 
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="activities/156" role="button">Learn more</a>
+    <%= button_to "Learn more", activity_path(Activity.all.sample.id), method: :"get", class:"btn btn-primary" %>
   </p>
 </div>

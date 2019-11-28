@@ -17,8 +17,19 @@ add_flash_types :info,:error,:warning,:success
 
     def authenticate_user
         unless user_signed_in?
-            flash[:danger] = "Please log in."
+
             redirect_to new_user_session_path, flash: {danger: "Access restricted !"}
         end
+    end
+
+    def authenticate_admin
+        if user_signed_in?
+            unless current_user.is_admin?
+                redirect_to activities_path, flash: {danger: "Access restricted to admin!"}
+            end
+        else 
+            redirect_to activities_path, flash: {danger: "Access restricted to admin!"}
+
+        end 
     end
 end

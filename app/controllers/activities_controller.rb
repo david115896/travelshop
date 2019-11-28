@@ -1,5 +1,6 @@
 class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin, except: [:index, :show]
 
   def index
     @activities = Activity.all
@@ -57,6 +58,6 @@ class ActivitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def activity_params
-      params.fetch(:activity, {})
+      params.fetch(:activity, {}).permit(:title, :description, :price, :image_url)
     end
 end

@@ -213,6 +213,12 @@ footer {
   margin-left: 25%;
   margin-right: 25%;
 }
+
+.alert-danger-form {
+  text-align: center;
+  background-color: rgb(228, 77, 51);
+  align-self: center;
+}
 .alert-warning {
   text-align: center;
   background-color: rgb(219, 140, 67);

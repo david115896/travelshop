@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user, only: [:show, :destroy, :edit]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+
 
   def show
     @orders=Order.where(user_id: current_user.id)
