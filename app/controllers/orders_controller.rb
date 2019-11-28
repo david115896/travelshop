@@ -20,7 +20,7 @@ class OrdersController < ApplicationController
   def update
     respond_to do |format|
       if @order.update(order_params)
-        format.html { redirect_to @order, notice: 'Order was successfully updated.' }
+        format.html { redirect_to @order, flash: {success: 'Order was successfully updated.'} }
       else
         format.html { render :edit }
       end
@@ -30,7 +30,7 @@ class OrdersController < ApplicationController
   def destroy
     @order.destroy
     respond_to do |format|
-      format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
+      format.html { redirect_to orders_url,flash: { success: 'Order was successfully destroyed.'} }
     end
   end
 

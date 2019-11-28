@@ -21,7 +21,7 @@ class SoldItemsController < ApplicationController
 
     respond_to do |format|
       if @sold_item.save
-        format.html { redirect_to @sold_item, notice: 'Sold item was successfully created.' }
+        format.html { redirect_to @sold_item,flash: { success: 'Sold item was successfully created.'} }
       else
         format.html { render :new }
       end
@@ -31,7 +31,7 @@ class SoldItemsController < ApplicationController
   def update
     respond_to do |format|
       if @sold_item.update(sold_item_params)
-        format.html { redirect_to @sold_item, notice: 'Sold item was successfully updated.' }
+        format.html { redirect_to @sold_item,flash: { success: 'Sold item was successfully updated.'} }
       else
         format.html { render :edit }
       end
@@ -41,7 +41,7 @@ class SoldItemsController < ApplicationController
   def destroy
     @sold_item.destroy
     respond_to do |format|
-      format.html { redirect_to sold_items_url, notice: 'Sold item was successfully destroyed.' }
+      format.html { redirect_to sold_items_url,flash: {success: 'Sold item was successfully destroyed.'} }
     end
   end
 

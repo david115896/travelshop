@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="card mb-3">
+          <h3 class="card-header">Activity [<%= @activity.id%>]</h3>
+      
+        <div class="card-body showCard">
+      
+            <h5 class="card-title"><%=@activity.title%></h5>
+            <h6 class="card-subtitle text-muted"></h6>
+            <img class="pic1" style="height: 370px; width: 95%; display:block;" src="<%=@activity.image_url%>" alt="Card image">
+         
+           <p id="notice"><%= notice %></p>
+           <%=@activity.description%>
+        </div>
+    </div>
+</div>  
+      
