@@ -20,8 +20,8 @@ class ChargesController < ApplicationController
 				currency: 'usd',
 			})
 			begin 
-				Order.add_order(current_user)
-				redirect_to charges_path, notice: 'Order was successfully created.'
+				Order.add_order(current_user, @amount)
+				redirect_to activities_path, notice: 'Order was successfully created.'
 			rescue
 				redirect_to carts_path, notice: 'An error occured. Contact us for more information'
 			end

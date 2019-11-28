@@ -1,20 +1,13 @@
-
 <div class="container">
   <div class="card m-3">
-
-    <h3 class="card-header">Activity [<%= @activity.id%>]</h3>
-
-
+    <h3 class="card-header text-center">Activity [<%= @activity.id%>]</h3>
     <div class="card-body showCard">
-
-
-      <h5 class="card-title"><%=@activity.title%></h5>
+      <h5 class="card-title text-center mb-3"><%=@activity.title%></h5>
       <h6 class="card-subtitle text-muted"></h6>
       <%= image_tag @activity.illustration, class:"pic1",  alt:"Card image" %>   
       <p id="notice"><%= notice %></p>
-       <%=@activity.description%>
-        <%= button_to 'Add to Cart', carts_path(:activity_id => @activity.id), method: :post, class: "mr-3"%>
-
+      <%=@activity.description%>
+      <%= button_to 'Add to Cart', carts_path(:activity_id => @activity.id), method: :post, class: "btn btn-primary m-3"%>
     </div>
   </div>
 </div>

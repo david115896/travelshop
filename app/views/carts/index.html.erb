@@ -1,8 +1,10 @@
-<p id="notice"><%= notice %></p>
-<div class="title_cart">
-  <h2> My cart <i class="fas fa-cart-arrow-down fa-x5"></i></h2>
-</div>
-<div class="container cart_Table">
+
+<div class="row align-items-center justify-content-center ">
+ <div class="col ">
+  <p id="notice"><%= notice %></p>
+  <div class="title_cart text-right"> 
+    <h2> My cart <i class="fas fa-cart-arrow-down fa-x5"></i></h2>
+  </div>
   <div class="tabl-cart">
     <table class="table ">
       <thead>
@@ -29,23 +31,30 @@
     </table>
   </div>
   <div class="row justify-content-center">
-  <%= form_tag charges_path do %>
-    <article>
-      <% if flash[:error].present? %>
-        <div id="error_explanation">
-          <p><%= flash[:error] %></p>
-        </div>
-      <% end %>
-      <label class="amount">
-        <span>Amount: <%= @amount %>$</span>
-      </label>
-    </article>
+    <% if @amount == 0 %>
+    <%= link_to 'No articles in your cart, click here to go back to home', activities_path, class:"mt-5"%>
+    <% else %>
+        <%= form_tag charges_path do %>
+        <article>
+          <% if flash[:error].present? %>
+            <div id="error_explanation">
+              <p><%= flash[:error] %></p>
+            </div>
+          <% end %>
+          <label class="amount">
+            <span>Amount: <%= @amount %>$</span>
+          </label>
+        </article>
 
-    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-            data-description="A month's subscription"
-            data-amount= <%= @amount*100 %>
-            data-locale="auto"></script>
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-description="A month's subscription"
+                data-amount= <%= @amount*100 %>
+                data-locale="auto">
+        </script>
+        <% end %>
+      
   <% end %>
   </div>
+</div>
 </div>

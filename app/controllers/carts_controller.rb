@@ -14,7 +14,7 @@ class CartsController < ApplicationController
     @cart.user_id = current_user.id
 
     if @cart.save
-    redirect_to activities_path, flash: { success: 'Actitivy added to cart'}
+    redirect_to activities_path, flash: { success: 'Activity added to cart'}
     else
       render :new
     end
@@ -23,7 +23,7 @@ class CartsController < ApplicationController
   def destroy
     @cart.destroy
     respond_to do |format|
-      format.html { redirect_to carts_url, flash: { success: 'Actitivy removed from cart'} }
+      format.html { redirect_to carts_url, flash: { success: 'Activity removed from cart'} }
     end
   end
 

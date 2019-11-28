@@ -3,7 +3,6 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
-
 	after_create :welcome_send
 	after_update :password_send
 

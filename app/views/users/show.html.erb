@@ -1,25 +1,47 @@
-<div class="container">
+<div class="row ">
+  <div class="col-6 pt-5">
+  <div class="container cart_Table justify-content-center  ">
+  <div class="tabl-show-user ">
+    <table class="table ">
+      <thead>
+        <tr>
+          <th scope="col">Your orders</th>
+          <th scope="col">Dates</th>
+          <th scope="col">Qty of activities</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @orders.each do |order| %>
+        <tr>
+          <td><%= order.id %></td>
+          <td><%= order.created_at %></td>
+          <td><%= order.quantity %></td>
+          <td><%= order.amount %> $</td>
+          
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+      </div>
+  </div>
+  </div>
+    <div class="col-4">
+
     <div class="jumbotron jumbotron_user">
       <h1 class="display-4">Show your Profil</h1>
       <%=image_tag("avatar.png", alt: "MyInc Logo")%>
       <br>
       <br>
-      <ul>
-        <li> your First name is: <%=@user.first_name %></li>
-        <li>your Last name is <%=@user.last_name %> </li>
-        <li>your email is: <%=@user.email %></li>
-        <li>your Adresse is: <%=@user.address %></li>
-      </ul>
+     
+      <p>My First name : <%=@user.first_name %> </p>
+       <p>My Last name : <%=@user.last_name %> </p>
+       <p>My Email : <%=@user.email %> </p>
+       <p>My Adresse is: <%=@user.address %> </p>
 <br>
       <%= link_to "Change your informations", edit_user_registration_path(current_user.id), class: "btn btn-primary btn-lg", role: "button" %>
     </div>
-
-  <ul>
-
-    <%=@orders.each  do |order| %>
-    <li><%= order.id %></li>
-      <%end %>
-  </ul>
-
+        </div>
 
 </div>
