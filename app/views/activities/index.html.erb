@@ -4,7 +4,10 @@
 </div>
 <div class="activities">
   <h1>Activities</h1>
-  <%= link_to 'New Activity', new_activity_path, class: "btn btn-primary" %>
+<div class="new_act">
+  <%= link_to 'Create New Activity', new_activity_path, class: "btn btn-primary" %>
+</div>
+<br>
   <div class="card-deck">
     <% for activity in @activities do %>
       <%= render partial: "card", locals: {activity: activity} %>
