@@ -1,14 +1,25 @@
-<div class="jumbotron jumbotron_user">
-  <div class="container">
-    <h1 class="display-4">Show your Profil</h1>
-    <%=image_tag("avatar.png", alt: "MyInc Logo")%>
-    <ul>
-      <li> your First name is: <%=@user.first_name %></li>
-      <li>your Last name is <%=@user.last_name %> </li>
-      <li>your email is: <%=@user.email %></li>
-      <li>your Adresse is: <%=@user.address %></li>
-    </ul>
+<div class="container">
+    <div class="jumbotron jumbotron_user">
+      <h1 class="display-4">Show your Profil</h1>
+      <%=image_tag("avatar.png", alt: "MyInc Logo")%>
+      <br>
+      <br>
+      <ul>
+        <li> your First name is: <%=@user.first_name %></li>
+        <li>your Last name is <%=@user.last_name %> </li>
+        <li>your email is: <%=@user.email %></li>
+        <li>your Adresse is: <%=@user.address %></li>
+      </ul>
+<br>
+      <%= link_to "Change your informations", edit_user_registration_path(current_user.id), class: "btn btn-primary btn-lg", role: "button" %>
+    </div>
 
-    <%= link_to "Change your informations", edit_user_registration_path(current_user.id), class: "btn btn-primary btn-lg", role: "button" %>
-  </div>
+  <ul>
+
+    <%=@orders.each  do |order| %>
+    <li><%= order.id %></li>
+      <%end %>
+  </ul>
+
+
 </div>
