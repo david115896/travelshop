@@ -45,4 +45,12 @@ puts "Génération des utilisateurs en cours"
 end
 puts "Génération des utilisateurs terminées"
 
+puts "Génération des administrateurs en cours"
+
+User.create!(email: "yoyo@yopmail.com", password: "azerty", is_admin: true)
+User.create!(email: "gluglu@yopmail.com", password: "azerty", is_admin: true)
+User.create!(email: "hibou@yopmail.com", password: "azerty", is_admin: true)
+
+puts "Génération des administrateurs en terminée"
+
 puts "Génération terminée"
