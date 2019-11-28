@@ -1,6 +1,7 @@
 class Order < ApplicationRecord
 
     #after_create :order_send
+		after_create :admin_send
 
     belongs_to :user
     has_many :sold_items
@@ -19,4 +20,8 @@ class Order < ApplicationRecord
         Cart.destro(current_user.id)
         UserMailer.order_email(current_user).deliver
     end
+
+		def admin_send
+			AdminMailer.order_email.deliver
+		end
 end
