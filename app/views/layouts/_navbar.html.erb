@@ -19,8 +19,8 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <% if user_signed_in? %>
-        <%= link_to "Profile", user_path(current_user.id), class:"nav-link" %>
-          <%= link_to "edit", edit_user_path(current_user.id), class:"nav-link" %>
+        <%= link_to "Profile", user_path(current_user.id), class:"dropdown-item" %>
+          <%= link_to "edit", edit_user_path(current_user.id), class:"dropdown-item" %>
         <% end %>
           </div>
           </li>
