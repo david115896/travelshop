@@ -5,12 +5,14 @@
 <div class="activities">
 
   <h1>Activities</h1>
-	<% if current_user then %>
-    <div class="row justify-content-center m-3">
-  		<%= link_to 'New Activity', new_activity_path, class: "btn btn-primary" %>
-	  	<%= link_to 'Panel admin', admin_users_path, class: "btn btn-primary ml-4" %>
-      </div>
-	<% end %>
+   <% if current_user? then %>
+    <% if current_user.is_admin? then %>
+      <div class="row justify-content-center m-3">
+        <%= link_to 'New Activity', new_activity_path, class: "btn btn-primary" %>
+        <%= link_to 'Panel admin', admin_users_path, class: "btn btn-primary ml-4" %>
+        </div>
+    <% end %>
+    <% end %>
 
   <div class="card-deck">
     <% for activity in @activities do %>
