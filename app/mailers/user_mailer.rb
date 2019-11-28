@@ -9,6 +9,7 @@ class UserMailer < ApplicationMailer
     @url  = 'https://travel-shop.herokuapp.com/activities'
 
     mail(to: @user.email, subject: 'Bienvenue chez nous !') 
+
   end
 
   def password_email(user)
