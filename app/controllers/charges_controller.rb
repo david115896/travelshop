@@ -21,9 +21,9 @@ class ChargesController < ApplicationController
 			})
 			begin 
 				Order.add_order(current_user)
-				redirect_to charges_path, notice: 'Order was successfully created.'
+				redirect_to charges_path, flash: {success: 'Order was successfully created.'}
 			rescue
-				redirect_to carts_path, notice: 'An error occured. Contact us for more information'
+				redirect_to carts_path,flash: { warning: 'An error occured. Contact us for more information'}
 			end
 		rescue Stripe::CardError => e
 			flash[:error] = e.message

@@ -20,7 +20,7 @@ class ActivitiesController < ApplicationController
 
     respond_to do |format|
       if @activity.save
-        format.html { redirect_to @activity, notice: 'Activity was successfully created.' }
+        format.html { redirect_to @activity, flash: {success: 'Activity was successfully created.'} }
       else
         format.html { render :new }
       end
@@ -30,7 +30,7 @@ class ActivitiesController < ApplicationController
   def update
     respond_to do |format|
       if @activity.update(activity_params)
-        format.html { redirect_to @activity, notice: 'Activity was successfully updated.' }
+        format.html { redirect_to @activity,flash: { success: 'Activity was successfully updated.'} }
       else
         format.html { render :edit }
       end
@@ -40,13 +40,13 @@ class ActivitiesController < ApplicationController
   def destroy
     @activity.destroy
     respond_to do |format|
-      format.html { redirect_to activities_url, notice: 'Activity was successfully destroyed.' }
+      format.html { redirect_to activities_url,flash: { success: 'Activity was successfully destroyed.'} }
     end
   end
 
   def import
     Activity.import(params[:file])
-    redirect_to activities_path, notice: "Activities Added"
+    redirect_to activities_path, flash: {info: "Activities Added"}
   end
 
   private

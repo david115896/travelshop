@@ -216,3 +216,35 @@ margin-top: 4%;
     background-color: white;
 
 }
+.alert-success {
+    text-align: center;
+    background-color: rgb(41, 161, 121);
+    align-self: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.alert-info {
+    text-align: center;
+    background-color: rgb(103, 103, 194);
+    align-self: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    
+}
+.alert-danger {
+    text-align: center;
+    background-color: rgb(228, 77, 51);
+    align-self: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.alert-warning {
+    text-align: center;
+    background-color: rgb(219, 140, 67);
+    align-self: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.close {
+    color: black;
+}
