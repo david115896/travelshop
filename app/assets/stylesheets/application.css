@@ -205,14 +205,14 @@ footer {
 }
 .alert-danger {
   text-align: center;
-  background-color: rgb(228, 77, 51);
+  background-color: rgb(192, 30, 2);
   align-self: center;
   margin-left: 25%;
   margin-right: 25%;
 }
 .alert-warning {
   text-align: center;
-  background-color: rgb(219, 140, 67);
+  background-color: rgb(255, 123, 0);
   align-self: center;
   margin-left: 25%;
   margin-right: 25%;
