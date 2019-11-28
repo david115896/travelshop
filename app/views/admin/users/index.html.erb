@@ -1,0 +1,27 @@
+<h1> Admin panel </h1>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Numéro d'achat</th>
+      <th scope="col">titre de l'activité</th>
+      <th scope="col">Mail de l'acheteur</th>
+      <th scope="col">date d'achat</th>
+    </tr>
+  </thead>
+  <tbody>
+		<% i = 1	 %>
+		<% for item in @soldItems  %>
+			<tr>
+				<th scope="row"><%= i%></th>
+				<% a =  item.activity%>
+				<td><%= a.title %> </td>
+				<% u = item.user %>
+				<td><%= u.email %></td>
+				<td><%= item.created_at %> </td>
+			</tr>
+			<% i +=1 %>
+		<% end %>
+  </tbody>
+</table>
