@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 	resources :charges, only:[:index, :new, :create]
 
 	namespace :admin do
-		resources :activities
+		resources :users
 	end
 
 end

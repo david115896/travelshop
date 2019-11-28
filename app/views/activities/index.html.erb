@@ -4,10 +4,18 @@
 </div>
 <div class="activities">
   <h1>Activities</h1>
-<div class="new_act">
-  <%= link_to 'Create New Activity', new_activity_path, class: "btn btn-primary" %>
-</div>
-<br>
+	<% if current_user then %>
+		<% if current_user.is_admin then %>
+			<%= link_to 'New Activity', new_activity_path, class: "btn btn-primary" %>
+		<% end %>
+	<% end %>
+
+	<% if current_user then %>
+		<% if current_user.is_admin then %>
+			<%= link_to 'Panel admin', admin_users_path, class: "btn btn-primary" %>
+		<% end %>
+	<% end %>
+
   <div class="card-deck">
     <% for activity in @activities do %>
       <%= render partial: "card", locals: {activity: activity} %>

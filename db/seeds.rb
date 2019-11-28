@@ -9,6 +9,9 @@ require 'csv'
 puts "destruction de l'ancienne BDD en cours"
 Activity.destroy_all
 User.destroy_all
+SoldItem.destroy_all
+Order.destroy_all
+
 puts "destruction terminée"
 
 
