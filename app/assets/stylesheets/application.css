@@ -42,10 +42,10 @@
         text-align: center;
     
     }
-    .card-body {
+    .card-body .showcard{
         background-color: #78c2ad;
         width: 100%;
-        color: #253f37;
+        color:#253f37;
         border-radius: 5px;
     }
     .card-body h1 {
@@ -316,9 +316,15 @@
         }
         .showactivitytitle {
             background-color: #f6f2e4;
-            font-size: 30px;
+            font-size: 60px;
         }
         .currentUserMail {
             color: #253f37;
             margin: 60%;
         }
+        .mr-4 {
+            background-color: #78c2ad;
+            margin-top: 1%;
+            border-radius: 7px;
+        }
+        
