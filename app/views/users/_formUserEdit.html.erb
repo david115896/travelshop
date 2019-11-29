@@ -1,22 +1,28 @@
 <div class="container edit_user_form">
-
-
-        <%= form_for @user do |f| %>
-        <i class="fas fa-user-lock fa-7x"></i><br><br>
+  <div class="row">
+    <div class="row-sm-4 formed">
+        <%= form_for @user do |f| %> <i class="fas fa-user-lock fa-7x locklogo"></i><br><br>
         <p class="formEditBody">
-          <i class="far fa-user-circle"></i> my <%= f.label :first_name %><br />
-          <%= f.text_field :first_name,class: 'formfield' %>
+          <i class="far fa-user-circle textEditUser"></i> my <%= f.label :first_name %><br />
+          <%= f.text_field :first_name,class: 'formfield formFieldEditUser' %>
         </p>
         <p>
-          <i class="fas fa-users"></i> my <%= f.label :last_name %><br />
-          <%= f.text_field :last_name, class: 'formfield' %>
+          <i class="fas fa-users textEditUser"></i> my <%= f.label :last_name %><br />
+          <%= f.text_field :last_name, class: 'formfield formFieldEditUser' %>
         </p>
         <p>
-          <i class="fas fa-bed"></i> my <%= f.label :address %><br />
-          <%= f.text_area :address, class: 'formfield' %>
+          <i class="fas fa-bed textEditUser"></i> my <%= f.label :address %><br />
+          <%= f.text_area :address, class: 'formfield formFieldEditUser' %>
         </p>
-      
-        <%= f.submit %>
-      
+        <div class="buttonEditUser">
+          <%= f.submit %>
+        </div>
         <% end %>
+    </div>
+      <div class="row -sm-4 EditUserPres">
+     <h1>Bienvenue <i class="fas fa-grin-wink"></i> <span class='currentUserMail'><br><br>'<%= current_user.email %>'</span></h1>
+     
+
       </div>
+  </div>
+</div>

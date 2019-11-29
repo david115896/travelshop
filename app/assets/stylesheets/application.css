@@ -43,10 +43,13 @@
     
     }
     .card-body {
-        background-color: #213a40;
+        background-color: #78c2ad;
         width: 100%;
-        color: #aeb3b2;
+        color: #253f37;
         border-radius: 5px;
+    }
+    .card-body h1 {
+        font-size: 50px;
     }
     .pic1 {
         display:block;
@@ -70,7 +73,7 @@
     .page-footer {
         overflow: hidden;
         color: rgba(255, 255, 255, 0.6);
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color:#253f37;
         text-align: center;
     }
     .img_card{
@@ -101,7 +104,7 @@
     
     #discover_seville{
         text-align: center;
-        background-color: #3384A7;
+        background-color: #78c2ad;
     }
     
     
@@ -160,9 +163,6 @@
         padding-left: 10%;
         padding-right: 10%;
         height: 20%;
-        justify-content: center;
-    
-    
     }
     
     
@@ -178,25 +178,7 @@
     .price{
         margin-bottom: 0%;
     }
-    
-    
-    .editForm{
-    
-        text-align: center;
-        color: black;
-        border:  3px  black solid;
-        border-radius: 6px;
-        background-color: grey;
-       width: 20%;
-    
-    }
-    
-    
-    #user_password_confirmation, #user_email, #user_password, #user_password_confirmation, #user_current_password{
-    
-        border-radius: 6px;
-    }
-    
+ 
     .back_profil{
     
         color: yellow;
@@ -205,10 +187,9 @@
     
     .jumbotron_user{
         margin-top: 4%;
-        margin-left: 30%;
-        margin-right: 30%;
-        box-sizing: border-box;
-        background-color: white;
+        background-color: #78c2ad;
+        color: #273a34;
+        justify-content: center;
     
     }
     .alert-success {
@@ -241,20 +222,28 @@
         }
 
         .img_jumpo{
-            background-image: url("china.jpeg");
+            background-image: url("1.jpg");
             background-size:  100% 100%; ;
             background-repeat: no-repeat;
+
+        }
+        .img_jumpo h1 {
+            color: #78c2ad;
+          text-shadow: 1px 2px 2px black;
+        }
+        .lead {
+            margin-bottom: 5%;
+            color: white;
+            text-shadow: 1px 1px 1px black;
         }
         .close {
           color: black;
           }
           .edit_user_form {
-          text-align: center;
-          color: rgba(255, 255, 255, 0.6);
-          border: 3px rgb(78, 77, 77) solid;
+          text-align: left;
+          color: #253f37;
           border-radius: 10px;
-          background-color: #213a40;
-          width: 50%;
+          background-color: #e2f3ee;
           margin-top: 2.5%;
           margin-bottom: 2.5%;
           height: fit-content;
@@ -269,6 +258,67 @@
           }
           
 
-.new_act{
-    margin-left: 8%;
-}
+        .new_act{
+        margin-left: 8%;
+        }
+        .activities h1 {
+            color: #78c2ad;
+            text-shadow: 0px 1px 1px black;
+            font-weight: 500;
+            font-size: 50px;
+
+        }
+        .nav {
+            text-align: right;
+            color: #253f37;
+            text-shadow: 1px 1px 1px black;
+            font-size:25px
+        }
+        .locklogo {
+          
+        }
+        .buttonEditUser {
+            margin-left: 2.5%;
+        }
+        .textEditUser {
+            margin-left: 2.5%;
+        }
+        .buttonEditUser {
+          
+            border-radius: 5px;
+            background-color: #78c2ad;
+        }
+        .anchor {
+            align-self: flex-end;
+        }
+        .userDropdown {
+            background-color: #45ad90;
+            color:grey;
+            font-size: 25px;
+        }
+        .formed {
+            margin-left:2.5% ;
+            background-color: #36997b;
+            padding: 2.5%;
+            border-radius: 6px;
+            width: 40%;
+        }
+        .formFieldEditUser {
+            width: 95%;
+            margin-left: 3.5%;
+        }
+        .EditUserPres {
+        margin-left: 10%;
+        color: #253f37;
+        }
+        .usermail {
+        color: #1d312b;
+        }
+        .showactivitytitle {
+            background-color: #f6f2e4;
+            font-size: 30px;
+        }
+        .currentUserMail {
+            color: #253f37;
+            margin: 60%;
+        }
