@@ -26,6 +26,7 @@
     } 
     h1,h2,h3,h4 {
         font-family: 'Coldiac Free Regular';
+        color: #253f37;
     }
     .actions {
         text-align: center;
@@ -127,7 +128,8 @@
     
     .title_cart{
         text-align: left;
-        margin-right: 50%;
+      font-size: 60px;
+      margin-right: 80%;
     
     }
     
@@ -327,4 +329,13 @@
             margin-top: 1%;
             border-radius: 7px;
         }
-        
+        .stripe-button {
+        background-color: #78c2ad;
+        margin: 2.5%;
+        }
+        .loginLogout {
+            margin-left: 60vmax;
+        }
+        .profile {
+            margin-left: 2vmax;
+        }

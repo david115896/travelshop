@@ -7,12 +7,12 @@
   ​
   <div class="collapse navbar-collapse nav" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
+      <li class="nav-item cart">
         <% if user_signed_in? %>
           <%= link_to carts_path,class: 'nav-link' do %>Cart <i class="fas fa-shopping-cart"></i><%end%>
         <% end %>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown profile">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
              aria-haspopup="true" aria-expanded="false">
             profile
@@ -25,7 +25,7 @@
           </div>
           </li>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown loginLogout">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
            aria-haspopup="true" aria-expanded="false">
           Login/out
