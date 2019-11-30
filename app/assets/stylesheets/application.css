@@ -17,6 +17,8 @@
 
  body {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;height: 100%;
+    background-color:
+    
     
     }
     h1 { font-family:  'Coldiac Free Regular';
@@ -44,7 +46,7 @@
     
     }
     .card-body .showcard{
-        background-color: #78c2ad;
+        background:  radial-gradient(#78c2ad,white);
         width: 100%;
         color:#253f37;
         border-radius: 5px;
@@ -65,10 +67,11 @@
     
     
     .card-deck{
-        margin-right: 5%;
-        margin-left: 5%;
+        margin-right: 2.5%;
+        margin-left: 2.5%;
         display: flex;
         justify-content: space-around;
+        
     }
     
     .page-footer {
@@ -87,7 +90,8 @@
     
     .card.m-2{
        height: 80%;
-    
+       box-shadow: 0px 1px 1px #78c2ad;
+       background:  linear-gradient(to top,white,#f6f2e4);
     }
     
     html, body {
@@ -105,7 +109,8 @@
     
     #discover_seville{
         text-align: center;
-        background-color: #78c2ad;
+        background-image: url('sunset.jpg');
+        color: #f6f2e4;
     }
     
     
@@ -128,7 +133,7 @@
     
     .title_cart{
         text-align: left;
-      font-size: 60px;
+      font-size: 65px;
       margin-right: 80%;
     
     }
@@ -142,6 +147,7 @@
     
     .table{
         border-color: #ffffff;
+        box-shadow: 2px 2px 2px 2px grey;
     
     }
     
@@ -188,10 +194,11 @@
     
     
     .jumbotron_user{
-        margin-top: 4%;
-        background-color: #78c2ad;
+       
+        background: content-box radial-gradient(ellipse at top,#78c2ad,white);
+        border-radius: 2px 2px 2px;
         color: #273a34;
-        justify-content: center;
+       margin: 1%;
     
     }
     .alert-success {
@@ -225,7 +232,7 @@
 
         .img_jumpo{
             background-image: url("1.jpg");
-            background-size:  100% 100%; ;
+            background-size:  100% 100% ;
             background-repeat: no-repeat;
 
         }
@@ -288,7 +295,7 @@
         .buttonEditUser {
           
             border-radius: 5px;
-            background-color: #78c2ad;
+            background:  radial-gradient(#78c2ad,white);
         }
         .anchor {
             align-self: flex-end;
@@ -310,8 +317,12 @@
             margin-left: 3.5%;
         }
         .EditUserPres {
-        margin-left: 10%;
+        
         color: #253f37;
+        background-color:#78c2ad;
+        width: 50%;
+        margin-left: 2.5%;
+        border-radius: 2px 2px;
         }
         .usermail {
         color: #1d312b;
@@ -326,11 +337,13 @@
         }
         .mr-4 {
             background-color: #78c2ad;
+            background:  radial-gradient(#78c2ad,white);
             margin-top: 1%;
             border-radius: 7px;
         }
         .stripe-button {
         background-color: #78c2ad;
+        background:  radial-gradient(#78c2ad,white);
         margin: 2.5%;
         }
         .loginLogout {
@@ -339,3 +352,30 @@
         .profile {
             margin-left: 2vmax;
         }
+        .pic3 {
+            object-fit: scale-down;
+        }
+        /* .userButton {
+            background-color: #c85e2d;
+            border: black;
+            width: 180px;
+            height: 70px;
+            border-radius: 10px;
+        } */
+        .login {
+            background:  radial-gradient(#78c2ad,white);
+
+        }
+        .navbarre {
+            background:  linear-gradient(to right,#78c2ad,#d3fff3);
+        }
+        .img-50 {
+            box-shadow: 1px 4px 4px 2px;
+        }
+        .cart_title {
+          
+            width: 300px;
+           
+        }
+
+     

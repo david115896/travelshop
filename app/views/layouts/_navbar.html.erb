@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary navbarre">
   <a class="navbar-brand" href="/"><i class="fas fa-globe-americas fa-3x"></i></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,20 +11,24 @@
         <% if user_signed_in? %>
           <%= link_to carts_path,class: 'nav-link' do %>Cart <i class="fas fa-shopping-cart"></i><%end%>
         <% end %>
-      </li>
-      <li class="nav-item dropdown profile">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+      </li><% if user_signed_in? %>
+      <li class="nav-item dropdown profile">  
+       
+          <a class="nav-link dropdown-toggle toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
              aria-haspopup="true" aria-expanded="false">
-            profile
-          </a>
+            profile 
+          </a>  
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <% if user_signed_in? %>
+     
         <%= link_to "Profile", user_path(current_user.id), class:"dropdown-item" %>
           <%= link_to "edit", edit_user_path(current_user.id), class:"dropdown-item" %>
-        <% end %>
+         
+          
+          
           </div>
           </li>
-      </li>
+      </li><%end%>
+       
       <li class="nav-item dropdown loginLogout">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
            aria-haspopup="true" aria-expanded="false">
@@ -34,6 +38,9 @@
           <% if user_signed_in?%>
             <%= link_to('Logout',destroy_user_session_path, method: :delete,class: 'dropdown-item') %>
           <% else %>
+            <style type="text/css">
+          .loginLogout { margin-left: 150vh;}
+            </style>
             <%= link_to('Sign Up', new_user_registration_path,class:'dropdown-item') %>
             <%= link_to('Login', new_user_session_path,class: 'dropdown-item')%>
           <% end %>

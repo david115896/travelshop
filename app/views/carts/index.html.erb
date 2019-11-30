@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
-<div class="title_cart">
-  <h1> My cart </h1>
-</div>
+
+  <h1 class="title_cart"> My cart </h1>
+
 <div class="container cart_Table">
   <div class="tabl-cart">
     <table class="table ">
@@ -18,7 +18,7 @@
         <% @carts_user.each do |cart| %>
         <tr>
           <td><%= image_tag cart.activity.image_url, class:"img-50" %></td>
-          <td><%= cart.activity.title %></td>
+          <td class="cart_title"><%=cart.activity.title%></td>
           <td><%= 1%></td>
           <td><%= cart.activity.price  %> $</td>
           <td><%= link_to  cart, method: :delete, data: { confirm: 'Are you sure?' } do%> <i class="fas fa-trash"></i>
