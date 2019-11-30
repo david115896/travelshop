@@ -365,9 +365,8 @@
             border-radius: 10px;
         } */
         .login {
-            background:  radial-gradient(#78c2ad,white);
-
-        }
+            background-image: url('sunset.jpg');
+    }
         .navbarre {
             background:  linear-gradient(to right,#78c2ad,#d3fff3);
         }
@@ -384,5 +383,18 @@
             color: white;
             text-shadow:2px 0px 2px black;
         }
-
+        .bckgrdSign_up {
+            background-image: url('sunset.jpg');
+        }
+        .ink {
+            background:  linear-gradient(to top,#b8dbd1,#ffffff);
+        }
+        .ink2 {
+            background:  linear-gradient(to top,#b8dbd1,#ffffff);
+        }
+        .navTitle {
+        color: #050807;
+        
+        }
+     
      
