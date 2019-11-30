@@ -332,8 +332,10 @@
             font-size: 60px;
         }
         .currentUserMail {
-            color: #253f37;
+            color: #1e3b32;
+            text-shadow:1px 0px 2px white;
             margin: 60%;
+            margin-left: 10%;
         }
         .mr-4 {
             background-color: #78c2ad;
@@ -376,6 +378,11 @@
           
             width: 300px;
            
+        }
+        .button_edit_user {
+            background:  linear-gradient(to right,#78c2ad,#d3fff3);
+            color: white;
+            text-shadow:2px 0px 2px black;
         }
 
      
