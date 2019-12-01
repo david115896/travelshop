@@ -1,45 +1,57 @@
-
-<div class="jumpo">
-  <%= render "layouts/jumpotron" %>
-</div>
-<div class="activities">
-  <h1>Activities</h1>
-	<% if current_user then %>
-		<% if current_user.is_admin then %>
-			<%= link_to 'New Activity', new_activity_path, class: "btn btn-primary" %>
-		<% end %>
-	<% end %>
-
-	<% if current_user then %>
-		<% if current_user.is_admin then %>
-			<%= link_to 'Panel admin', admin_users_path, class: "btn btn-primary" %>
-		<% end %>
-	<% end %>
-
-  <div class="card-deck">
-    <% for activity in @activities do %>
-      <%= render partial: "card", locals: {activity: activity} %>
-    <% end  %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>activities</title>
+</head>
+<body>
+  
+  <div class="jumpo">
+    <%= render "layouts/jumpotron" %>
   </div>
-</div>
-
-
-<br>
-<br>
-<br>
-<div id="discover_seville">
-<div class="container text-light">
+  <div class="activities">
+    <h1>Activities</h1>
+    <% if current_user then %>
+		<% if current_user.is_admin then %>
+    <%= link_to 'New Activity', new_activity_path, class: "btn btn-primary" %>
+		<% end %>
+    <% end %>
+    
+    <% if current_user then %>
+		<% if current_user.is_admin then %>
+    <%= link_to 'Panel admin', admin_users_path, class: "btn btn-primary" %>
+		<% end %>
+    <% end %>
+    
+    <div class="card-deck">
+      <% for activity in @activities do %>
+      <%= render partial: "card", locals: {activity: activity} %>
+      <% end  %>
+    </div>
+  </div>
+  
+  
   <br>
   <br>
   <br>
-  <h1> look this video to discover Seville!</h1></center>
-  <br>
-  <iframe href="#sevilla" width="560" height="315" src="https://www.youtube.com/embed/KXsE0qVJp_s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
-  <br>
-  <br>
-
-</div>
-
-</div>
+  <div id="discover_seville">
+    <div class="container text-light">
+      <br>
+      <br>
+      <br>
+      <center><h1 class="videoTitle">discover Sevilla!</h1></center>
+      <br>
+      <iframe href="#sevilla" width="560" height="315" src="https://www.youtube.com/embed/KXsE0qVJp_s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
+      <br>
+      <br>
+      <br>
+      
+    </div>
+    
+  </div>
+</body>
+</html>
+  

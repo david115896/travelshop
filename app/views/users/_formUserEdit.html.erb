@@ -1,6 +1,6 @@
 <div class="container edit_user_form">
   <div class="row">
-    <div class="row-sm-4 formed">
+    <div class="row-sm formed">
         <%= form_for @user do |f| %> <i class="fas fa-user-lock fa-7x locklogo"></i><br><br>
         <p class="formEditBody">
           <i class="far fa-user-circle textEditUser"></i> my <%= f.label :first_name %><br />
@@ -19,7 +19,7 @@
         </div>
         <% end %>
     </div>
-      <div class="row -sm-4 EditUserPres">
+      <div class="row-sm  EditUserPres">
      <h1>Bienvenue<span class='currentUserMail'><br>  <%= current_user.email %> </span></h1>
      <%= image_tag 'notebook.jpg'%>
 
